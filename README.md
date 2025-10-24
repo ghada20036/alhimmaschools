@@ -1,0 +1,2369 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مدارس الهمة العلمية الأهلية</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            box-sizing: border-box;
+        }
+        
+        @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap');
+        
+        * {
+            font-family: 'Amiri', serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #f97316 100%);
+        }
+        
+        .card-shadow {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
+        }
+        
+        .animate-fade-in {
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .logo-container {
+            width: 120px;
+            height: 120px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .contact-info {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body class="min-h-full gradient-bg">
+    <!-- الصفحة الرئيسية -->
+    <div id="homePage" class="min-h-full flex items-center justify-center p-4">
+        <div class="max-w-md w-full">
+            <!-- الشعار -->
+            <div class="logo-container animate-fade-in">
+                <svg width="80" height="80" viewBox="0 0 100 100" class="text-blue-800">
+                    <circle cx="50" cy="50" r="45" fill="currentColor" opacity="0.1"/>
+                    <path d="M30 35 L50 25 L70 35 L70 65 L50 75 L30 65 Z" fill="currentColor"/>
+                    <circle cx="50" cy="45" r="8" fill="white"/>
+                    <rect x="46" y="55" width="8" height="15" fill="white" rx="2"/>
+                </svg>
+            </div>
+            
+            <!-- عنوان المدرسة -->
+            <div class="text-center mb-8 animate-fade-in">
+                <h1 class="text-3xl font-bold text-white mb-2">مدارس الهمة العلمية الأهلية</h1>
+                <p class="text-blue-100 text-lg">نحو مستقبل تعليمي مشرق</p>
+            </div>
+            
+            <!-- أزرار التسجيل -->
+            <div class="space-y-4 animate-fade-in">
+                <button onclick="showStudentLogin()" class="w-full btn-primary text-white py-4 px-6 rounded-xl font-bold text-lg">
+                    👨‍🎓 تسجيل دخول الطلاب
+                </button>
+                
+                <button onclick="showAdminLogin()" class="w-full bg-orange-500 hover:bg-orange-600 text-white py-4 px-6 rounded-xl font-bold text-lg transition-all duration-300">
+                    🧑‍💼 تسجيل دخول الإدارة
+                </button>
+            </div>
+            
+            <!-- معلومات التواصل -->
+            <div class="contact-info rounded-xl p-6 mt-8 animate-fade-in">
+                <h3 class="text-white font-bold text-lg mb-4 text-center">📞 معلومات التواصل</h3>
+                <div class="space-y-2 text-white text-sm">
+                    <p>📍 اليمن – إب – المشنة – دار القدسي</p>
+                    <p>☎️ 04420927</p>
+                    <p>📱 779492227 – 714442137</p>
+                    <p>✉️ alhimmaschools@</p>
+                </div>
+                
+                <div class="flex justify-center space-x-4 mt-4">
+                    <a href="#" class="text-white hover:text-blue-200 transition-colors">
+                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-white hover:text-pink-200 transition-colors">
+                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-white hover:text-green-200 transition-colors">
+                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- إعداد وبرمجة -->
+            <div class="text-center mt-8 animate-fade-in">
+                <p class="text-white text-sm opacity-80">إعداد وبرمجة: أ. غادة الحيدري</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- صفحة تسجيل دخول الطلاب -->
+    <div id="studentLoginPage" class="min-h-full flex items-center justify-center p-4 hidden">
+        <div class="max-w-md w-full">
+            <div class="bg-white rounded-2xl card-shadow p-8 animate-fade-in">
+                <div class="text-center mb-8">
+                    <div class="logo-container">
+                        <svg width="80" height="80" viewBox="0 0 100 100" class="text-blue-800">
+                            <circle cx="50" cy="50" r="45" fill="currentColor" opacity="0.1"/>
+                            <path d="M30 35 L50 25 L70 35 L70 65 L50 75 L30 65 Z" fill="currentColor"/>
+                            <circle cx="50" cy="45" r="8" fill="white"/>
+                            <rect x="46" y="55" width="8" height="15" fill="white" rx="2"/>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl font-bold text-gray-800 mb-2">تسجيل دخول الطلاب</h2>
+                    <p class="text-gray-600">أدخل بياناتك للوصول إلى حسابك</p>
+                </div>
+                
+                <form onsubmit="loginStudent(event)" class="space-y-6">
+                    <div>
+                        <label for="studentUsername" class="block text-sm font-medium text-gray-700 mb-2">اسم المستخدم</label>
+                        <input type="text" id="studentUsername" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    </div>
+                    
+                    <div>
+                        <label for="studentPassword" class="block text-sm font-medium text-gray-700 mb-2">كلمة المرور</label>
+                        <input type="password" id="studentPassword" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    </div>
+                    
+                    <button type="submit" class="w-full btn-primary text-white py-3 px-6 rounded-lg font-bold">
+                        تسجيل الدخول
+                    </button>
+                </form>
+                
+                <div class="mt-6 text-center">
+                    <p class="text-sm text-gray-600 mb-4">نسيت كلمة المرور؟</p>
+                    <p class="text-xs text-gray-500 bg-gray-50 p-3 rounded-lg">
+                        يرجى التواصل مع إدارة المدرسة على الرقم: 779492227
+                    </p>
+                </div>
+                
+                <button onclick="showHomePage()" class="w-full mt-6 bg-gray-500 hover:bg-gray-600 text-white py-2 px-4 rounded-lg transition-colors">
+                    العودة للصفحة الرئيسية
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- صفحة تسجيل دخول الإدارة -->
+    <div id="adminLoginPage" class="min-h-full flex items-center justify-center p-4 hidden">
+        <div class="max-w-md w-full">
+            <div class="bg-white rounded-2xl card-shadow p-8 animate-fade-in">
+                <div class="text-center mb-8">
+                    <div class="logo-container">
+                        <svg width="80" height="80" viewBox="0 0 100 100" class="text-orange-600">
+                            <circle cx="50" cy="50" r="45" fill="currentColor" opacity="0.1"/>
+                            <path d="M30 35 L50 25 L70 35 L70 65 L50 75 L30 65 Z" fill="currentColor"/>
+                            <circle cx="50" cy="45" r="8" fill="white"/>
+                            <rect x="46" y="55" width="8" height="15" fill="white" rx="2"/>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl font-bold text-gray-800 mb-2">🧑‍💼 تسجيل دخول الإدارة</h2>
+                    <p class="text-gray-600">لوحة التحكم الإدارية</p>
+                </div>
+                
+                <form onsubmit="loginAdmin(event)" class="space-y-6">
+                    <div>
+                        <label for="adminUsername" class="block text-sm font-medium text-gray-700 mb-2">اسم المستخدم الإداري</label>
+                        <input type="text" id="adminUsername" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent">
+                    </div>
+                    
+                    <div>
+                        <label for="adminPassword" class="block text-sm font-medium text-gray-700 mb-2">كلمة المرور</label>
+                        <input type="password" id="adminPassword" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent">
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-orange-500 hover:bg-orange-600 text-white py-3 px-6 rounded-lg font-bold transition-colors">
+                        دخول لوحة التحكم
+                    </button>
+                </form>
+                
+                <div class="mt-6 p-4 bg-red-50 border border-red-200 rounded-lg">
+                    <p class="text-sm text-red-600 text-center">
+                        🔒 هذه الصفحة مخصصة للمسؤولين فقط
+                    </p>
+                </div>
+                
+                <button onclick="showHomePage()" class="w-full mt-6 bg-gray-500 hover:bg-gray-600 text-white py-2 px-4 rounded-lg transition-colors">
+                    العودة للصفحة الرئيسية
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- لوحة التحكم الإدارية -->
+    <div id="adminDashboard" class="min-h-full bg-gray-50 hidden">
+        <header class="bg-white shadow-sm border-b">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center py-4">
+                    <div class="flex items-center space-x-4">
+                        <svg width="40" height="40" viewBox="0 0 100 100" class="text-orange-600">
+                            <circle cx="50" cy="50" r="45" fill="currentColor" opacity="0.1"/>
+                            <path d="M30 35 L50 25 L70 35 L70 65 L50 75 L30 65 Z" fill="currentColor"/>
+                            <circle cx="50" cy="45" r="8" fill="white"/>
+                            <rect x="46" y="55" width="8" height="15" fill="white" rx="2"/>
+                        </svg>
+                        <h1 class="text-xl font-bold text-gray-800">🧑‍💼 لوحة التحكم الإدارية</h1>
+                    </div>
+                    <button onclick="logout()" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg transition-colors">
+                        تسجيل الخروج
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <!-- إحصائيات سريعة -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+                <div class="bg-blue-500 text-white rounded-xl p-6">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-blue-100">إجمالي الطلاب</p>
+                            <p class="text-3xl font-bold" id="totalStudents">0</p>
+                        </div>
+                        <div class="text-4xl">👨‍🎓</div>
+                    </div>
+                </div>
+                
+                <div class="bg-green-500 text-white rounded-xl p-6">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-green-100">الحاضرون اليوم</p>
+                            <p class="text-3xl font-bold" id="presentToday">0</p>
+                        </div>
+                        <div class="text-4xl">✅</div>
+                    </div>
+                </div>
+                
+                <div class="bg-orange-500 text-white rounded-xl p-6">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-orange-100">الرسوم المحصلة</p>
+                            <p class="text-3xl font-bold" id="collectedFees">0</p>
+                        </div>
+                        <div class="text-4xl">💰</div>
+                    </div>
+                </div>
+                
+                <div class="bg-purple-500 text-white rounded-xl p-6">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-purple-100">الأنشطة النشطة</p>
+                            <p class="text-3xl font-bold" id="activeActivities">0</p>
+                        </div>
+                        <div class="text-4xl">🎉</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- أزرار الإدارة -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8">
+                <button onclick="showStudentsManagement()" class="bg-blue-500 hover:bg-blue-600 text-white p-4 rounded-xl transition-all duration-300 transform hover:scale-105">
+                    <div class="text-2xl mb-2">👥</div>
+                    <div class="font-bold text-sm">إدارة الطلاب</div>
+                </button>
+                
+                <button onclick="showGradesManagement()" class="bg-green-500 hover:bg-green-600 text-white p-4 rounded-xl transition-all duration-300 transform hover:scale-105">
+                    <div class="text-2xl mb-2">📊</div>
+                    <div class="font-bold text-sm">إدارة العلامات</div>
+                </button>
+                
+                <button onclick="showAttendanceManagement()" class="bg-yellow-500 hover:bg-yellow-600 text-white p-4 rounded-xl transition-all duration-300 transform hover:scale-105">
+                    <div class="text-2xl mb-2">📅</div>
+                    <div class="font-bold text-sm">إدارة الحضور</div>
+                </button>
+                
+                <button onclick="showFeesManagement()" class="bg-purple-500 hover:bg-purple-600 text-white p-4 rounded-xl transition-all duration-300 transform hover:scale-105">
+                    <div class="text-2xl mb-2">💰</div>
+                    <div class="font-bold text-sm">إدارة الرسوم</div>
+                </button>
+                
+                <button onclick="showActivitiesManagement()" class="bg-orange-500 hover:bg-orange-600 text-white p-4 rounded-xl transition-all duration-300 transform hover:scale-105">
+                    <div class="text-2xl mb-2">🎉</div>
+                    <div class="font-bold text-sm">إدارة الأنشطة</div>
+                </button>
+                
+                <button onclick="showNotificationsManagement()" class="bg-red-500 hover:bg-red-600 text-white p-4 rounded-xl transition-all duration-300 transform hover:scale-105">
+                    <div class="text-2xl mb-2">🔔</div>
+                    <div class="font-bold text-sm">إدارة الإشعارات</div>
+                </button>
+            </div>
+
+            <!-- منطقة المحتوى الإداري -->
+            <div id="adminContentArea" class="bg-white rounded-2xl card-shadow p-6">
+                <div class="text-center py-12">
+                    <div class="text-6xl mb-4">🧑‍💼</div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">مرحباً بك في لوحة التحكم</h3>
+                    <p class="text-gray-600">اختر أحد الأقسام أعلاه لبدء الإدارة</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- صفحة الطالب الشخصية -->
+    <div id="studentDashboard" class="min-h-full bg-gray-50 hidden">
+        <header class="bg-white shadow-sm border-b">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center py-4">
+                    <div class="flex items-center space-x-4">
+                        <svg width="40" height="40" viewBox="0 0 100 100" class="text-blue-800">
+                            <circle cx="50" cy="50" r="45" fill="currentColor" opacity="0.1"/>
+                            <path d="M30 35 L50 25 L70 35 L70 65 L50 75 L30 65 Z" fill="currentColor"/>
+                            <circle cx="50" cy="45" r="8" fill="white"/>
+                            <rect x="46" y="55" width="8" height="15" fill="white" rx="2"/>
+                        </svg>
+                        <h1 class="text-xl font-bold text-gray-800">مدارس الهمة العلمية</h1>
+                    </div>
+                    <button onclick="logout()" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg transition-colors">
+                        تسجيل الخروج
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <!-- بيانات الطالب -->
+            <div class="bg-white rounded-2xl card-shadow p-6 mb-8">
+                <div class="flex items-center space-x-6">
+                    <div class="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center">
+                        <svg width="48" height="48" fill="currentColor" class="text-blue-600" viewBox="0 0 24 24">
+                            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h2 class="text-2xl font-bold text-gray-800" id="studentName">أحمد محمد علي</h2>
+                        <p class="text-gray-600" id="studentGrade">الصف السادس الأساسي</p>
+                        <p class="text-sm text-gray-500">رقم الطالب: 2024001</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- الأزرار الرئيسية -->
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
+                <button onclick="showGrades()" class="bg-blue-500 hover:bg-blue-600 text-white p-6 rounded-xl transition-all duration-300 transform hover:scale-105">
+                    <div class="text-3xl mb-2">📊</div>
+                    <div class="font-bold">العلامات الدراسية</div>
+                </button>
+                
+                <button onclick="showAttendance()" class="bg-green-500 hover:bg-green-600 text-white p-6 rounded-xl transition-all duration-300 transform hover:scale-105">
+                    <div class="text-3xl mb-2">📅</div>
+                    <div class="font-bold">الحضور والغياب</div>
+                </button>
+                
+                <button onclick="showFees()" class="bg-purple-500 hover:bg-purple-600 text-white p-6 rounded-xl transition-all duration-300 transform hover:scale-105">
+                    <div class="text-3xl mb-2">💰</div>
+                    <div class="font-bold">الرسوم الدراسية</div>
+                </button>
+                
+                <button onclick="showActivities()" class="bg-orange-500 hover:bg-orange-600 text-white p-6 rounded-xl transition-all duration-300 transform hover:scale-105">
+                    <div class="text-3xl mb-2">🎉</div>
+                    <div class="font-bold">الأنشطة</div>
+                </button>
+                
+                <button onclick="showNotifications()" class="bg-red-500 hover:bg-red-600 text-white p-6 rounded-xl transition-all duration-300 transform hover:scale-105">
+                    <div class="text-3xl mb-2">🔔</div>
+                    <div class="font-bold">الإشعارات</div>
+                </button>
+                
+                <button onclick="showContact()" class="bg-teal-500 hover:bg-teal-600 text-white p-6 rounded-xl transition-all duration-300 transform hover:scale-105">
+                    <div class="text-3xl mb-2">📞</div>
+                    <div class="font-bold">التواصل</div>
+                </button>
+            </div>
+
+            <!-- منطقة المحتوى -->
+            <div id="contentArea" class="bg-white rounded-2xl card-shadow p-6">
+                <div class="text-center py-12">
+                    <div class="text-6xl mb-4">🎓</div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">مرحباً بك في حسابك الشخصي</h3>
+                    <p class="text-gray-600">اختر أحد الأقسام أعلاه لعرض المعلومات</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // بيانات تجريبية للطلاب
+        const studentsData = {
+            'student1': {
+                username: 'student1',
+                password: '123456',
+                name: 'أحمد محمد علي',
+                grade: 'الصف السادس الأساسي',
+                id: '2024001',
+                grades: {
+                    'القرآن الكريم': { نوفمبر: 95, ديسمبر: 92, يناير: 98 },
+                    'التربية الإسلامية': { نوفمبر: 88, ديسمبر: 90, يناير: 87 },
+                    'اللغة العربية': { نوفمبر: 85, ديسمبر: 88, يناير: 90 },
+                    'اللغة الإنجليزية': { نوفمبر: 78, ديسمبر: 82, يناير: 85 },
+                    'الرياضيات': { نوفمبر: 92, ديسمبر: 89, يناير: 94 },
+                    'العلوم': { نوفمبر: 86, ديسمبر: 88, يناير: 91 },
+                    'الاجتماعيات': { نوفمبر: 83, ديسمبر: 85, يناير: 87 },
+                    'الحاسوب': { نوفمبر: 95, ديسمبر: 97, يناير: 96 }
+                },
+                fees: {
+                    total: 150000,
+                    paid: 100000,
+                    remaining: 50000
+                }
+            }
+        };
+
+        // بيانات الإدارة
+        const adminData = {
+            username: 'admin',
+            password: 'admin123'
+        };
+
+        let currentStudent = null;
+
+        // رابط Google Apps Script
+        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwBQnV1M1yE6g7V_euAV7tBXEq5jjmuVbXOSHR7vFOZCfiEt5gXBSgQuGcTB8RZCx9i/exec';
+        
+        // متغيرات عامة
+        let allStudentsData = [];
+        let currentAdminSection = '';
+
+        function showHomePage() {
+            document.getElementById('homePage').classList.remove('hidden');
+            document.getElementById('studentLoginPage').classList.add('hidden');
+            document.getElementById('adminLoginPage').classList.add('hidden');
+            document.getElementById('studentDashboard').classList.add('hidden');
+            document.getElementById('adminDashboard').classList.add('hidden');
+        }
+
+        // وظائف التعامل مع Google Sheets
+        async function loadStudentsData() {
+            try {
+                showLoadingMessage('جاري تحميل بيانات الطلاب...');
+                
+                // محاولة الاتصال مع Google Sheets
+                const response = await fetch(`${GOOGLE_SCRIPT_URL}?action=getStudents`, {
+                    method: 'GET',
+                    mode: 'cors',
+                    headers: {
+                        'Accept': 'application/json',
+                    }
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    allStudentsData = data.students || [];
+                    updateDashboardStats();
+                    hideLoadingMessage();
+                    showMessage('تم تحميل البيانات بنجاح', 'success');
+                } else {
+                    throw new Error(data.error || 'خطأ في تحميل البيانات');
+                }
+            } catch (error) {
+                console.error('Error loading students data:', error);
+                hideLoadingMessage();
+                
+                // استخدام البيانات التجريبية في حالة فشل الاتصال
+                loadSampleData();
+                showMessage('تم تحميل البيانات التجريبية (لا يوجد اتصال بالخادم)', 'error');
+            }
+        }
+
+        // تحميل البيانات التجريبية
+        function loadSampleData() {
+            allStudentsData = [
+                {
+                    id: '2024001',
+                    name: 'أحمد محمد علي',
+                    grade: 'الصف السادس الأساسي',
+                    username: 'student1',
+                    password: '123456',
+                    fees: {
+                        total: 150000,
+                        paid: 100000,
+                        remaining: 50000
+                    },
+                    grades: {
+                        'القرآن الكريم': { نوفمبر: 95, ديسمبر: 92, يناير: 98 },
+                        'التربية الإسلامية': { نوفمبر: 88, ديسمبر: 90, يناير: 87 },
+                        'اللغة العربية': { نوفمبر: 85, ديسمبر: 88, يناير: 90 },
+                        'اللغة الإنجليزية': { نوفمبر: 78, ديسمبر: 82, يناير: 85 },
+                        'الرياضيات': { نوفمبر: 92, ديسمبر: 89, يناير: 94 },
+                        'العلوم': { نوفمبر: 86, ديسمبر: 88, يناير: 91 },
+                        'الاجتماعيات': { نوفمبر: 83, ديسمبر: 85, يناير: 87 },
+                        'الحاسوب': { نوفمبر: 95, ديسمبر: 97, يناير: 96 }
+                    }
+                },
+                {
+                    id: '2024002',
+                    name: 'فاطمة أحمد محمد',
+                    grade: 'الصف الخامس الأساسي',
+                    username: 'student2',
+                    password: '123456',
+                    fees: {
+                        total: 140000,
+                        paid: 140000,
+                        remaining: 0
+                    },
+                    grades: {
+                        'القرآن الكريم': { نوفمبر: 98, ديسمبر: 96, يناير: 99 },
+                        'التربية الإسلامية': { نوفمبر: 92, ديسمبر: 94, يناير: 91 },
+                        'اللغة العربية': { نوفمبر: 89, ديسمبر: 91, يناير: 93 },
+                        'اللغة الإنجليزية': { نوفمبر: 82, ديسمبر: 85, يناير: 88 },
+                        'الرياضيات': { نوفمبر: 87, ديسمبر: 89, يناير: 92 },
+                        'العلوم': { نوفمبر: 90, ديسمبر: 92, يناير: 94 },
+                        'الاجتماعيات': { نوفمبر: 86, ديسمبر: 88, يناير: 90 },
+                        'الحاسوب': { نوفمبر: 93, ديسمبر: 95, يناير: 97 }
+                    }
+                },
+                {
+                    id: '2024003',
+                    name: 'محمد علي حسن',
+                    grade: 'الصف السابع الأساسي',
+                    username: 'student3',
+                    password: '123456',
+                    fees: {
+                        total: 160000,
+                        paid: 80000,
+                        remaining: 80000
+                    },
+                    grades: {
+                        'القرآن الكريم': { نوفمبر: 90, ديسمبر: 88, يناير: 92 },
+                        'التربية الإسلامية': { نوفمبر: 85, ديسمبر: 87, يناير: 89 },
+                        'اللغة العربية': { نوفمبر: 82, ديسمبر: 84, يناير: 86 },
+                        'اللغة الإنجليزية': { نوفمبر: 75, ديسمبر: 78, يناير: 80 },
+                        'الرياضيات': { نوفمبر: 88, ديسمبر: 90, يناير: 87 },
+                        'العلوم': { نوفمبر: 83, ديسمبر: 85, يناير: 88 },
+                        'الاجتماعيات': { نوفمبر: 80, ديسمبر: 82, يناير: 84 },
+                        'الحاسوب': { نوفمبر: 92, ديسمبر: 94, يناير: 91 }
+                    }
+                }
+            ];
+            updateDashboardStats();
+        }
+
+        async function saveStudentData(studentData, action = 'update') {
+            try {
+                showLoadingMessage('جاري حفظ البيانات...');
+                
+                const response = await fetch(GOOGLE_SCRIPT_URL, {
+                    method: 'POST',
+                    mode: 'cors',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        action: action,
+                        studentData: studentData
+                    })
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const result = await response.json();
+                hideLoadingMessage();
+                
+                if (result.success) {
+                    showMessage('تم حفظ البيانات بنجاح', 'success');
+                    await loadStudentsData(); // إعادة تحميل البيانات
+                    return true;
+                } else {
+                    throw new Error(result.error || 'خطأ في حفظ البيانات');
+                }
+            } catch (error) {
+                console.error('Error saving student data:', error);
+                hideLoadingMessage();
+                
+                // حفظ محلي في حالة فشل الاتصال
+                saveDataLocally(studentData, action);
+                showMessage('تم حفظ البيانات محلياً (لا يوجد اتصال بالخادم)', 'error');
+                return false;
+            }
+        }
+
+        // حفظ البيانات محلياً
+        function saveDataLocally(studentData, action) {
+            if (action === 'add') {
+                allStudentsData.push(studentData);
+            } else if (action === 'update') {
+                const index = allStudentsData.findIndex(s => s.id === studentData.id);
+                if (index !== -1) {
+                    allStudentsData[index] = studentData;
+                }
+            } else if (action === 'delete') {
+                allStudentsData = allStudentsData.filter(s => s.id !== studentData.id);
+            }
+            updateDashboardStats();
+        }
+
+        function updateDashboardStats() {
+            document.getElementById('totalStudents').textContent = allStudentsData.length;
+            
+            // حساب الحاضرين اليوم (افتراضي)
+            const presentToday = Math.floor(allStudentsData.length * 0.9);
+            document.getElementById('presentToday').textContent = presentToday;
+            
+            // حساب الرسوم المحصلة
+            const totalCollected = allStudentsData.reduce((sum, student) => {
+                return sum + (student.fees?.paid || 0);
+            }, 0);
+            document.getElementById('collectedFees').textContent = (totalCollected / 1000).toFixed(0) + 'K';
+            
+            // الأنشطة النشطة (افتراضي)
+            document.getElementById('activeActivities').textContent = '5';
+        }
+
+        function showLoadingMessage(message) {
+            const loadingDiv = document.createElement('div');
+            loadingDiv.id = 'loadingMessage';
+            loadingDiv.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50';
+            loadingDiv.innerHTML = `
+                <div class="bg-white rounded-lg p-6 flex items-center space-x-4">
+                    <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+                    <span class="text-gray-700">${message}</span>
+                </div>
+            `;
+            document.body.appendChild(loadingDiv);
+        }
+
+        function hideLoadingMessage() {
+            const loadingDiv = document.getElementById('loadingMessage');
+            if (loadingDiv) {
+                loadingDiv.remove();
+            }
+        }
+
+        function showStudentLogin() {
+            document.getElementById('homePage').classList.add('hidden');
+            document.getElementById('studentLoginPage').classList.remove('hidden');
+            document.getElementById('adminLoginPage').classList.add('hidden');
+            document.getElementById('studentDashboard').classList.add('hidden');
+            document.getElementById('adminDashboard').classList.add('hidden');
+        }
+
+        // وظائف إدارة الأقسام المختلفة
+        function showStudentsManagement() {
+            currentAdminSection = 'students';
+            const contentArea = document.getElementById('adminContentArea');
+            contentArea.innerHTML = `
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-2xl font-bold text-gray-800">👥 إدارة الطلاب</h3>
+                    <button onclick="showAddStudentForm()" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition-colors">
+                        ➕ إضافة طالب جديد
+                    </button>
+                </div>
+                
+                <div class="overflow-x-auto">
+                    <table class="w-full border-collapse border border-gray-300">
+                        <thead>
+                            <tr class="bg-gray-50">
+                                <th class="border border-gray-300 px-4 py-3 text-right font-bold">الاسم</th>
+                                <th class="border border-gray-300 px-4 py-3 text-center font-bold">الصف</th>
+                                <th class="border border-gray-300 px-4 py-3 text-center font-bold">رقم الطالب</th>
+                                <th class="border border-gray-300 px-4 py-3 text-center font-bold">الإجراءات</th>
+                            </tr>
+                        </thead>
+                        <tbody id="studentsTableBody">
+                            ${generateStudentsTable()}
+                        </tbody>
+                    </table>
+                </div>
+            `;
+        }
+
+        function generateStudentsTable() {
+            if (allStudentsData.length === 0) {
+                return `
+                    <tr>
+                        <td colspan="4" class="border border-gray-300 px-4 py-8 text-center text-gray-500">
+                            لا توجد بيانات طلاب حالياً
+                        </td>
+                    </tr>
+                `;
+            }
+            
+            return allStudentsData.map(student => `
+                <tr class="hover:bg-gray-50">
+                    <td class="border border-gray-300 px-4 py-3">${student.name || 'غير محدد'}</td>
+                    <td class="border border-gray-300 px-4 py-3 text-center">${student.grade || 'غير محدد'}</td>
+                    <td class="border border-gray-300 px-4 py-3 text-center">${student.id || 'غير محدد'}</td>
+                    <td class="border border-gray-300 px-4 py-3 text-center">
+                        <button onclick="editStudent('${student.id}')" class="bg-yellow-500 hover:bg-yellow-600 text-white px-3 py-1 rounded text-sm ml-2">
+                            تعديل
+                        </button>
+                        <button onclick="deleteStudent('${student.id}')" class="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded text-sm">
+                            حذف
+                        </button>
+                    </td>
+                </tr>
+            `).join('');
+        }
+
+        function showAddStudentForm() {
+            const contentArea = document.getElementById('adminContentArea');
+            contentArea.innerHTML = `
+                <div class="max-w-2xl mx-auto">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">➕ إضافة طالب جديد</h3>
+                    
+                    <form onsubmit="addNewStudent(event)" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="studentName" class="block text-sm font-medium text-gray-700 mb-2">الاسم الكامل</label>
+                                <input type="text" id="studentName" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            </div>
+                            
+                            <div>
+                                <label for="studentGrade" class="block text-sm font-medium text-gray-700 mb-2">الصف الدراسي</label>
+                                <select id="studentGrade" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                    <option value="">اختر الصف</option>
+                                    <option value="الصف الأول الأساسي">الصف الأول الأساسي</option>
+                                    <option value="الصف الثاني الأساسي">الصف الثاني الأساسي</option>
+                                    <option value="الصف الثالث الأساسي">الصف الثالث الأساسي</option>
+                                    <option value="الصف الرابع الأساسي">الصف الرابع الأساسي</option>
+                                    <option value="الصف الخامس الأساسي">الصف الخامس الأساسي</option>
+                                    <option value="الصف السادس الأساسي">الصف السادس الأساسي</option>
+                                    <option value="الصف السابع الأساسي">الصف السابع الأساسي</option>
+                                    <option value="الصف الثامن الأساسي">الصف الثامن الأساسي</option>
+                                    <option value="الصف التاسع الأساسي">الصف التاسع الأساسي</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label for="studentId" class="block text-sm font-medium text-gray-700 mb-2">رقم الطالب</label>
+                                <input type="text" id="studentId" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            </div>
+                            
+                            <div>
+                                <label for="studentUsername" class="block text-sm font-medium text-gray-700 mb-2">اسم المستخدم</label>
+                                <input type="text" id="studentUsername" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            </div>
+                            
+                            <div>
+                                <label for="studentPassword" class="block text-sm font-medium text-gray-700 mb-2">كلمة المرور</label>
+                                <input type="text" id="studentPassword" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            </div>
+                            
+                            <div>
+                                <label for="totalFees" class="block text-sm font-medium text-gray-700 mb-2">إجمالي الرسوم</label>
+                                <input type="number" id="totalFees" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            </div>
+                        </div>
+                        
+                        <div class="flex space-x-4">
+                            <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-bold transition-colors">
+                                حفظ الطالب
+                            </button>
+                            <button type="button" onclick="showStudentsManagement()" class="bg-gray-500 hover:bg-gray-600 text-white px-6 py-3 rounded-lg font-bold transition-colors">
+                                إلغاء
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            `;
+        }
+
+        async function addNewStudent(event) {
+            event.preventDefault();
+            
+            const studentData = {
+                name: document.getElementById('studentName').value,
+                grade: document.getElementById('studentGrade').value,
+                id: document.getElementById('studentId').value,
+                username: document.getElementById('studentUsername').value,
+                password: document.getElementById('studentPassword').value,
+                fees: {
+                    total: parseInt(document.getElementById('totalFees').value),
+                    paid: 0,
+                    remaining: parseInt(document.getElementById('totalFees').value)
+                },
+                grades: {
+                    'القرآن الكريم': { نوفمبر: 0, ديسمبر: 0, يناير: 0 },
+                    'التربية الإسلامية': { نوفمبر: 0, ديسمبر: 0, يناير: 0 },
+                    'اللغة العربية': { نوفمبر: 0, ديسمبر: 0, يناير: 0 },
+                    'اللغة الإنجليزية': { نوفمبر: 0, ديسمبر: 0, يناير: 0 },
+                    'الرياضيات': { نوفمبر: 0, ديسمبر: 0, يناير: 0 },
+                    'العلوم': { نوفمبر: 0, ديسمبر: 0, يناير: 0 },
+                    'الاجتماعيات': { نوفمبر: 0, ديسمبر: 0, يناير: 0 },
+                    'الحاسوب': { نوفمبر: 0, ديسمبر: 0, يناير: 0 }
+                }
+            };
+            
+            const success = await saveStudentData(studentData, 'add');
+            if (success) {
+                showStudentsManagement();
+            }
+        }
+
+        async function deleteStudent(studentId) {
+            // إنشاء نافذة تأكيد مخصصة
+            const confirmDiv = document.createElement('div');
+            confirmDiv.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50';
+            confirmDiv.innerHTML = `
+                <div class="bg-white rounded-lg p-6 max-w-md mx-4">
+                    <h3 class="text-lg font-bold text-gray-800 mb-4">تأكيد الحذف</h3>
+                    <p class="text-gray-600 mb-6">هل أنت متأكد من حذف هذا الطالب؟ لا يمكن التراجع عن هذا الإجراء.</p>
+                    <div class="flex space-x-4">
+                        <button onclick="confirmDelete('${studentId}')" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg transition-colors">
+                            نعم، احذف
+                        </button>
+                        <button onclick="cancelDelete()" class="bg-gray-500 hover:bg-gray-600 text-white px-4 py-2 rounded-lg transition-colors">
+                            إلغاء
+                        </button>
+                    </div>
+                </div>
+            `;
+            confirmDiv.id = 'confirmDialog';
+            document.body.appendChild(confirmDiv);
+        }
+
+        async function confirmDelete(studentId) {
+            document.getElementById('confirmDialog').remove();
+            const success = await saveStudentData({ id: studentId }, 'delete');
+            if (success) {
+                showStudentsManagement();
+            }
+        }
+
+        function cancelDelete() {
+            document.getElementById('confirmDialog').remove();
+        }
+
+        function showAdminLogin() {
+            document.getElementById('homePage').classList.add('hidden');
+            document.getElementById('studentLoginPage').classList.add('hidden');
+            document.getElementById('adminLoginPage').classList.remove('hidden');
+            document.getElementById('studentDashboard').classList.add('hidden');
+            document.getElementById('adminDashboard').classList.add('hidden');
+        }
+
+        function loginStudent(event) {
+            event.preventDefault();
+            const username = document.getElementById('studentUsername').value;
+            const password = document.getElementById('studentPassword').value;
+
+            // البحث في البيانات المحملة
+            const student = allStudentsData.find(s => s.username === username && s.password === password);
+            
+            if (student) {
+                currentStudent = student;
+                document.getElementById('studentName').textContent = currentStudent.name;
+                document.getElementById('studentGrade').textContent = currentStudent.grade;
+                
+                document.getElementById('homePage').classList.add('hidden');
+                document.getElementById('studentLoginPage').classList.add('hidden');
+                document.getElementById('studentDashboard').classList.remove('hidden');
+                
+                showMessage('مرحباً بك ' + currentStudent.name, 'success');
+            } else {
+                // التحقق من البيانات التجريبية القديمة كبديل
+                if (studentsData[username] && studentsData[username].password === password) {
+                    currentStudent = studentsData[username];
+                    document.getElementById('studentName').textContent = currentStudent.name;
+                    document.getElementById('studentGrade').textContent = currentStudent.grade;
+                    
+                    document.getElementById('homePage').classList.add('hidden');
+                    document.getElementById('studentLoginPage').classList.add('hidden');
+                    document.getElementById('studentDashboard').classList.remove('hidden');
+                    
+                    showMessage('مرحباً بك ' + currentStudent.name, 'success');
+                } else {
+                    showMessage('اسم المستخدم أو كلمة المرور غير صحيحة', 'error');
+                }
+            }
+        }
+
+        function loginAdmin(event) {
+            event.preventDefault();
+            const username = document.getElementById('adminUsername').value;
+            const password = document.getElementById('adminPassword').value;
+
+            if (username === adminData.username && password === adminData.password) {
+                document.getElementById('homePage').classList.add('hidden');
+                document.getElementById('adminLoginPage').classList.add('hidden');
+                document.getElementById('adminDashboard').classList.remove('hidden');
+                
+                // تحميل البيانات عند دخول الإدارة
+                loadStudentsData();
+                showMessage('مرحباً بك في لوحة التحكم', 'success');
+            } else {
+                showMessage('بيانات الدخول غير صحيحة', 'error');
+            }
+        }
+
+        function logout() {
+            currentStudent = null;
+            showHomePage();
+        }
+
+        function showGrades() {
+            if (!currentStudent) return;
+            
+            const contentArea = document.getElementById('contentArea');
+            let gradesHTML = `
+                <h3 class="text-2xl font-bold text-gray-800 mb-6">📊 العلامات الدراسية</h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full border-collapse border border-gray-300">
+                        <thead>
+                            <tr class="bg-blue-50">
+                                <th class="border border-gray-300 px-4 py-3 text-right font-bold">المادة</th>
+                                <th class="border border-gray-300 px-4 py-3 text-center font-bold">نوفمبر</th>
+                                <th class="border border-gray-300 px-4 py-3 text-center font-bold">ديسمبر</th>
+                                <th class="border border-gray-300 px-4 py-3 text-center font-bold">يناير</th>
+                                <th class="border border-gray-300 px-4 py-3 text-center font-bold">المعدل</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+            `;
+            
+            for (const [subject, grades] of Object.entries(currentStudent.grades)) {
+                const average = Math.round((grades.نوفمبر + grades.ديسمبر + grades.يناير) / 3);
+                const gradeColor = average >= 90 ? 'text-green-600' : average >= 80 ? 'text-blue-600' : average >= 70 ? 'text-orange-600' : 'text-red-600';
+                
+                gradesHTML += `
+                    <tr class="hover:bg-gray-50">
+                        <td class="border border-gray-300 px-4 py-3 font-medium">${subject}</td>
+                        <td class="border border-gray-300 px-4 py-3 text-center">${grades.نوفمبر}</td>
+                        <td class="border border-gray-300 px-4 py-3 text-center">${grades.ديسمبر}</td>
+                        <td class="border border-gray-300 px-4 py-3 text-center">${grades.يناير}</td>
+                        <td class="border border-gray-300 px-4 py-3 text-center font-bold ${gradeColor}">${average}</td>
+                    </tr>
+                `;
+            }
+            
+            gradesHTML += `
+                        </tbody>
+                    </table>
+                </div>
+            `;
+            
+            contentArea.innerHTML = gradesHTML;
+        }
+
+        function showAttendance() {
+            const contentArea = document.getElementById('contentArea');
+            contentArea.innerHTML = `
+                <h3 class="text-2xl font-bold text-gray-800 mb-6">📅 الحضور والغياب</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-green-50 border border-green-200 rounded-lg p-6">
+                        <h4 class="text-lg font-bold text-green-800 mb-4">إحصائيات الحضور</h4>
+                        <div class="space-y-2">
+                            <div class="flex justify-between">
+                                <span>أيام الحضور:</span>
+                                <span class="font-bold text-green-600">85 يوم</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>أيام الغياب:</span>
+                                <span class="font-bold text-red-600">5 أيام</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>نسبة الحضور:</span>
+                                <span class="font-bold text-blue-600">94.4%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                        <h4 class="text-lg font-bold text-blue-800 mb-4">آخر 7 أيام</h4>
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-center">
+                                <span>الأحد 15/12</span>
+                                <span class="bg-green-500 text-white px-2 py-1 rounded text-sm">حاضر</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span>الاثنين 16/12</span>
+                                <span class="bg-green-500 text-white px-2 py-1 rounded text-sm">حاضر</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span>الثلاثاء 17/12</span>
+                                <span class="bg-red-500 text-white px-2 py-1 rounded text-sm">غائب</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span>الأربعاء 18/12</span>
+                                <span class="bg-green-500 text-white px-2 py-1 rounded text-sm">حاضر</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span>الخميس 19/12</span>
+                                <span class="bg-green-500 text-white px-2 py-1 rounded text-sm">حاضر</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function showFees() {
+            if (!currentStudent) return;
+            
+            const contentArea = document.getElementById('contentArea');
+            const fees = currentStudent.fees;
+            const paidPercentage = (fees.paid / fees.total) * 100;
+            
+            contentArea.innerHTML = `
+                <h3 class="text-2xl font-bold text-gray-800 mb-6">💰 الرسوم الدراسية</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                    <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 text-center">
+                        <div class="text-3xl font-bold text-blue-600">${fees.total.toLocaleString()}</div>
+                        <div class="text-gray-600 mt-2">إجمالي الرسوم</div>
+                        <div class="text-sm text-gray-500">ريال يمني</div>
+                    </div>
+                    
+                    <div class="bg-green-50 border border-green-200 rounded-lg p-6 text-center">
+                        <div class="text-3xl font-bold text-green-600">${fees.paid.toLocaleString()}</div>
+                        <div class="text-gray-600 mt-2">المبلغ المدفوع</div>
+                        <div class="text-sm text-gray-500">ريال يمني</div>
+                    </div>
+                    
+                    <div class="bg-red-50 border border-red-200 rounded-lg p-6 text-center">
+                        <div class="text-3xl font-bold text-red-600">${fees.remaining.toLocaleString()}</div>
+                        <div class="text-gray-600 mt-2">المبلغ المتبقي</div>
+                        <div class="text-sm text-gray-500">ريال يمني</div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <h4 class="text-lg font-bold text-gray-800 mb-4">نسبة السداد</h4>
+                    <div class="w-full bg-gray-200 rounded-full h-4 mb-2">
+                        <div class="bg-blue-600 h-4 rounded-full transition-all duration-500" style="width: ${paidPercentage}%"></div>
+                    </div>
+                    <div class="text-center text-lg font-bold text-gray-700">${paidPercentage.toFixed(1)}%</div>
+                </div>
+            `;
+        }
+
+        function showActivities() {
+            const contentArea = document.getElementById('contentArea');
+            const activities = getStoredActivities();
+            
+            contentArea.innerHTML = `
+                <h3 class="text-2xl font-bold text-gray-800 mb-6">🎉 الأنشطة المدرسية</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    ${activities.map(activity => `
+                        <div class="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm">
+                            <div class="h-48 bg-gradient-to-br ${activity.color} flex items-center justify-center">
+                                <div class="text-white text-6xl">${activity.icon}</div>
+                            </div>
+                            <div class="p-4">
+                                <h4 class="font-bold text-gray-800 mb-2">${activity.title}</h4>
+                                <p class="text-gray-600 text-sm">${activity.description}</p>
+                                <div class="text-xs text-gray-500 mt-2">${activity.date}</div>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+                
+                ${activities.length === 0 ? `
+                    <div class="text-center py-12">
+                        <div class="text-6xl mb-4">🎨</div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-2">لا توجد أنشطة حالياً</h4>
+                        <p class="text-gray-600">سيتم إضافة الأنشطة المدرسية قريباً</p>
+                    </div>
+                ` : ''}
+            `;
+        }
+
+        function showNotifications() {
+            const contentArea = document.getElementById('contentArea');
+            const notifications = getStoredNotifications();
+            
+            contentArea.innerHTML = `
+                <h3 class="text-2xl font-bold text-gray-800 mb-6">🔔 الإشعارات</h3>
+                <div class="space-y-4">
+                    ${notifications.map(notification => {
+                        const typeColors = {
+                            info: 'bg-blue-50 border-blue-500 text-blue-800 text-blue-700 text-blue-600',
+                            warning: 'bg-yellow-50 border-yellow-500 text-yellow-800 text-yellow-700 text-yellow-600',
+                            success: 'bg-green-50 border-green-500 text-green-800 text-green-700 text-green-600',
+                            urgent: 'bg-red-50 border-red-500 text-red-800 text-red-700 text-red-600'
+                        };
+                        
+                        const colors = typeColors[notification.type] || typeColors.info;
+                        const [bgColor, borderColor, titleColor, textColor, dateColor] = colors.split(' ');
+                        
+                        return `
+                            <div class="${bgColor} border-r-4 ${borderColor} p-4 rounded-lg">
+                                <div class="flex items-start">
+                                    <div class="text-xl ml-3">${getNotificationIcon(notification.type)}</div>
+                                    <div>
+                                        <h4 class="font-bold ${titleColor}">${notification.title}</h4>
+                                        <p class="${textColor} mt-1">${notification.message}</p>
+                                        <div class="text-xs ${dateColor} mt-2">${notification.date}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                    }).join('')}
+                </div>
+                
+                ${notifications.length === 0 ? `
+                    <div class="text-center py-12">
+                        <div class="text-6xl mb-4">📭</div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-2">لا توجد إشعارات</h4>
+                        <p class="text-gray-600">سيتم عرض الإشعارات الجديدة هنا</p>
+                    </div>
+                ` : ''}
+            `;
+        }
+
+        function showContact() {
+            const contentArea = document.getElementById('contentArea');
+            contentArea.innerHTML = `
+                <h3 class="text-2xl font-bold text-gray-800 mb-6">📞 التواصل مع المدرسة</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                        <h4 class="text-lg font-bold text-blue-800 mb-4">معلومات الاتصال</h4>
+                        <div class="space-y-3">
+                            <div class="flex items-center">
+                                <span class="text-blue-600 ml-3">📍</span>
+                                <span>اليمن – إب – المشنة – دار القدسي</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-blue-600 ml-3">☎️</span>
+                                <span>04420927</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-blue-600 ml-3">📱</span>
+                                <span>779492227 – 714442137</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-blue-600 ml-3">✉️</span>
+                                <span>alhimmaschools@</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-50 border border-gray-200 rounded-lg p-6">
+                        <h4 class="text-lg font-bold text-gray-800 mb-4">تابعنا على</h4>
+                        <div class="space-y-3">
+                            <a href="#" class="flex items-center p-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" class="ml-3">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                                <span>Facebook</span>
+                            </a>
+                            
+                            <a href="#" class="flex items-center p-3 bg-pink-600 text-white rounded-lg hover:bg-pink-700 transition-colors">
+                                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" class="ml-3">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                </svg>
+                                <span>Instagram</span>
+                            </a>
+                            
+                            <a href="#" class="flex items-center p-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">
+                                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" class="ml-3">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+                                </svg>
+                                <span>WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function showMessage(message, type) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `fixed top-4 right-4 p-4 rounded-lg shadow-lg z-50 ${
+                type === 'success' ? 'bg-green-500 text-white' : 'bg-red-500 text-white'
+            }`;
+            messageDiv.textContent = message;
+            
+            document.body.appendChild(messageDiv);
+            
+            setTimeout(() => {
+                messageDiv.remove();
+            }, 3000);
+        }
+
+        // وظائف إدارة العلامات والحضور والرسوم
+        function showGradesManagement() {
+            currentAdminSection = 'grades';
+            const contentArea = document.getElementById('adminContentArea');
+            contentArea.innerHTML = `
+                <h3 class="text-2xl font-bold text-gray-800 mb-6">📊 إدارة العلامات الدراسية</h3>
+                
+                <div class="mb-6">
+                    <label for="gradeStudentSelect" class="block text-sm font-medium text-gray-700 mb-2">اختر الطالب</label>
+                    <select id="gradeStudentSelect" onchange="loadStudentGrades()" class="w-full max-w-md px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                        <option value="">اختر طالب</option>
+                        ${allStudentsData.map(student => `<option value="${student.id}">${student.name} - ${student.grade}</option>`).join('')}
+                    </select>
+                </div>
+                
+                <div id="gradesForm" class="hidden">
+                    <div class="overflow-x-auto">
+                        <table class="w-full border-collapse border border-gray-300">
+                            <thead>
+                                <tr class="bg-green-50">
+                                    <th class="border border-gray-300 px-4 py-3 text-right font-bold">المادة</th>
+                                    <th class="border border-gray-300 px-4 py-3 text-center font-bold">نوفمبر</th>
+                                    <th class="border border-gray-300 px-4 py-3 text-center font-bold">ديسمبر</th>
+                                    <th class="border border-gray-300 px-4 py-3 text-center font-bold">يناير</th>
+                                </tr>
+                            </thead>
+                            <tbody id="gradesTableBody">
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="mt-6">
+                        <button onclick="saveGrades()" class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-bold transition-colors">
+                            حفظ العلامات
+                        </button>
+                    </div>
+                </div>
+            `;
+        }
+
+        function loadStudentGrades() {
+            const studentId = document.getElementById('gradeStudentSelect').value;
+            if (!studentId) {
+                document.getElementById('gradesForm').classList.add('hidden');
+                return;
+            }
+            
+            const student = allStudentsData.find(s => s.id === studentId);
+            if (!student) return;
+            
+            const subjects = ['القرآن الكريم', 'التربية الإسلامية', 'اللغة العربية', 'اللغة الإنجليزية', 'الرياضيات', 'العلوم', 'الاجتماعيات', 'الحاسوب'];
+            const months = ['نوفمبر', 'ديسمبر', 'يناير'];
+            
+            let gradesHTML = '';
+            subjects.forEach(subject => {
+                gradesHTML += `
+                    <tr class="hover:bg-gray-50">
+                        <td class="border border-gray-300 px-4 py-3 font-medium">${subject}</td>
+                `;
+                months.forEach(month => {
+                    const grade = student.grades?.[subject]?.[month] || 0;
+                    gradesHTML += `
+                        <td class="border border-gray-300 px-4 py-3 text-center">
+                            <input type="number" min="0" max="100" value="${grade}" 
+                                   id="grade_${subject}_${month}" 
+                                   class="w-20 px-2 py-1 border border-gray-300 rounded text-center focus:ring-2 focus:ring-green-500">
+                        </td>
+                    `;
+                });
+                gradesHTML += '</tr>';
+            });
+            
+            document.getElementById('gradesTableBody').innerHTML = gradesHTML;
+            document.getElementById('gradesForm').classList.remove('hidden');
+        }
+
+        async function saveGrades() {
+            const studentId = document.getElementById('gradeStudentSelect').value;
+            if (!studentId) return;
+            
+            const student = allStudentsData.find(s => s.id === studentId);
+            if (!student) return;
+            
+            const subjects = ['القرآن الكريم', 'التربية الإسلامية', 'اللغة العربية', 'اللغة الإنجليزية', 'الرياضيات', 'العلوم', 'الاجتماعيات', 'الحاسوب'];
+            const months = ['نوفمبر', 'ديسمبر', 'يناير'];
+            
+            const updatedGrades = {};
+            subjects.forEach(subject => {
+                updatedGrades[subject] = {};
+                months.forEach(month => {
+                    const input = document.getElementById(`grade_${subject}_${month}`);
+                    updatedGrades[subject][month] = parseInt(input.value) || 0;
+                });
+            });
+            
+            const updatedStudent = { ...student, grades: updatedGrades };
+            const success = await saveStudentData(updatedStudent, 'update');
+            if (success) {
+                showMessage('تم حفظ العلامات بنجاح', 'success');
+            }
+        }
+
+        function showAttendanceManagement() {
+            currentAdminSection = 'attendance';
+            const contentArea = document.getElementById('adminContentArea');
+            
+            // تحديد التاريخ الحالي
+            const today = new Date();
+            const todayStr = today.toISOString().split('T')[0];
+            const currentMonth = today.getMonth() + 1;
+            const currentYear = today.getFullYear();
+            
+            contentArea.innerHTML = `
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-2xl font-bold text-gray-800">📅 إدارة الحضور والغياب</h3>
+                    <div class="flex space-x-4">
+                        <select id="attendanceViewMode" onchange="changeAttendanceView()" class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500">
+                            <option value="daily">الحضور اليومي</option>
+                            <option value="monthly">التقرير الشهري</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <!-- عرض الحضور اليومي -->
+                <div id="dailyAttendanceView">
+                    <div class="flex justify-between items-center mb-6">
+                        <div class="flex space-x-4">
+                            <input type="date" id="attendanceDate" value="${todayStr}" 
+                                   class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500">
+                            <button onclick="loadDayAttendance()" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition-colors">
+                                📋 تحميل الحضور
+                            </button>
+                        </div>
+                        <div class="flex space-x-4">
+                            <button onclick="markAllPresent()" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors">
+                                ✅ تحديد الكل حاضر
+                            </button>
+                            <button onclick="saveAttendance()" class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-lg transition-colors">
+                                💾 حفظ الحضور
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                        <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 text-center">
+                            <div class="text-3xl font-bold text-blue-600" id="totalStudentsCount">${allStudentsData.length}</div>
+                            <div class="text-gray-600 mt-2">إجمالي الطلاب</div>
+                        </div>
+                        
+                        <div class="bg-green-50 border border-green-200 rounded-lg p-6 text-center">
+                            <div class="text-3xl font-bold text-green-600" id="presentCount">0</div>
+                            <div class="text-gray-600 mt-2">الحاضرون</div>
+                        </div>
+                        
+                        <div class="bg-red-50 border border-red-200 rounded-lg p-6 text-center">
+                            <div class="text-3xl font-bold text-red-600" id="absentCount">${allStudentsData.length}</div>
+                            <div class="text-gray-600 mt-2">الغائبون</div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-200">
+                        <div class="p-4 border-b border-gray-200">
+                            <h4 class="text-lg font-bold text-gray-800">قائمة الحضور - <span id="currentAttendanceDate">${new Date().toLocaleDateString('ar-SA')}</span></h4>
+                        </div>
+                        
+                        <div class="overflow-x-auto">
+                            <table class="w-full">
+                                <thead class="bg-gray-50">
+                                    <tr>
+                                        <th class="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">الطالب</th>
+                                        <th class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">الصف</th>
+                                        <th class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">الحالة</th>
+                                        <th class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">ملاحظات</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200" id="attendanceTableBody">
+                                    ${generateAttendanceTable()}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- عرض التقرير الشهري -->
+                <div id="monthlyAttendanceView" class="hidden">
+                    <div class="flex justify-between items-center mb-6">
+                        <div class="flex space-x-4">
+                            <select id="attendanceMonth" onchange="loadMonthlyAttendance()" class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500">
+                                <option value="1">يناير</option>
+                                <option value="2">فبراير</option>
+                                <option value="3">مارس</option>
+                                <option value="4">أبريل</option>
+                                <option value="5">مايو</option>
+                                <option value="6">يونيو</option>
+                                <option value="7">يوليو</option>
+                                <option value="8">أغسطس</option>
+                                <option value="9">سبتمبر</option>
+                                <option value="10">أكتوبر</option>
+                                <option value="11">نوفمبر</option>
+                                <option value="12" ${currentMonth === 12 ? 'selected' : ''}>ديسمبر</option>
+                            </select>
+                            <select id="attendanceYear" onchange="loadMonthlyAttendance()" class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500">
+                                <option value="2023">2023</option>
+                                <option value="2024" selected>2024</option>
+                                <option value="2025">2025</option>
+                            </select>
+                        </div>
+                        <button onclick="exportMonthlyReport()" class="bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded-lg transition-colors">
+                            📊 تصدير التقرير
+                        </button>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-6">
+                        <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 text-center">
+                            <div class="text-2xl font-bold text-blue-600" id="monthlyTotalDays">0</div>
+                            <div class="text-gray-600 mt-2">أيام الدراسة</div>
+                        </div>
+                        
+                        <div class="bg-green-50 border border-green-200 rounded-lg p-6 text-center">
+                            <div class="text-2xl font-bold text-green-600" id="monthlyAvgPresent">0%</div>
+                            <div class="text-gray-600 mt-2">متوسط الحضور</div>
+                        </div>
+                        
+                        <div class="bg-red-50 border border-red-200 rounded-lg p-6 text-center">
+                            <div class="text-2xl font-bold text-red-600" id="monthlyAvgAbsent">0%</div>
+                            <div class="text-gray-600 mt-2">متوسط الغياب</div>
+                        </div>
+                        
+                        <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-6 text-center">
+                            <div class="text-2xl font-bold text-yellow-600" id="monthlyBestClass">-</div>
+                            <div class="text-gray-600 mt-2">أفضل صف</div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-200">
+                        <div class="p-4 border-b border-gray-200">
+                            <h4 class="text-lg font-bold text-gray-800">تقرير الحضور الشهري - <span id="monthlyReportTitle">ديسمبر 2024</span></h4>
+                        </div>
+                        
+                        <div class="overflow-x-auto">
+                            <table class="w-full">
+                                <thead class="bg-gray-50">
+                                    <tr>
+                                        <th class="px-4 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">الطالب</th>
+                                        <th class="px-4 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">الصف</th>
+                                        <th class="px-4 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">أيام الحضور</th>
+                                        <th class="px-4 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">أيام الغياب</th>
+                                        <th class="px-4 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">نسبة الحضور</th>
+                                        <th class="px-4 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">التقييم</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200" id="monthlyAttendanceTableBody">
+                                    ${generateMonthlyAttendanceTable()}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            // تعيين الشهر الحالي
+            document.getElementById('attendanceMonth').value = currentMonth;
+            
+            updateAttendanceStats();
+            loadMonthlyAttendance();
+        }
+
+        function generateAttendanceTable() {
+            if (allStudentsData.length === 0) {
+                return `
+                    <tr>
+                        <td colspan="4" class="px-6 py-8 text-center text-gray-500">
+                            لا توجد بيانات طلاب
+                        </td>
+                    </tr>
+                `;
+            }
+            
+            return allStudentsData.map(student => `
+                <tr class="hover:bg-gray-50">
+                    <td class="px-6 py-4">
+                        <div class="flex items-center">
+                            <div class="text-sm font-medium text-gray-900">${student.name}</div>
+                            <div class="text-sm text-gray-500 mr-2">رقم: ${student.id}</div>
+                        </div>
+                    </td>
+                    <td class="px-6 py-4 text-center text-sm text-gray-900">${student.grade}</td>
+                    <td class="px-6 py-4 text-center">
+                        <div class="flex justify-center space-x-2">
+                            <label class="flex items-center">
+                                <input type="radio" name="attendance_${student.id}" value="present" 
+                                       onchange="updateAttendanceStats()" 
+                                       class="text-green-600 focus:ring-green-500">
+                                <span class="mr-2 text-sm text-green-600">حاضر</span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="radio" name="attendance_${student.id}" value="absent" checked
+                                       onchange="updateAttendanceStats()" 
+                                       class="text-red-600 focus:ring-red-500">
+                                <span class="mr-2 text-sm text-red-600">غائب</span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="radio" name="attendance_${student.id}" value="late" 
+                                       onchange="updateAttendanceStats()" 
+                                       class="text-yellow-600 focus:ring-yellow-500">
+                                <span class="mr-2 text-sm text-yellow-600">متأخر</span>
+                            </label>
+                        </div>
+                    </td>
+                    <td class="px-6 py-4 text-center">
+                        <input type="text" placeholder="ملاحظة..." 
+                               id="note_${student.id}"
+                               class="w-32 px-2 py-1 text-sm border border-gray-300 rounded focus:ring-2 focus:ring-yellow-500">
+                    </td>
+                </tr>
+            `).join('');
+        }
+
+        function updateAttendanceStats() {
+            let presentCount = 0;
+            let absentCount = 0;
+            
+            allStudentsData.forEach(student => {
+                const presentRadio = document.querySelector(`input[name="attendance_${student.id}"][value="present"]`);
+                const lateRadio = document.querySelector(`input[name="attendance_${student.id}"][value="late"]`);
+                
+                if (presentRadio && presentRadio.checked) {
+                    presentCount++;
+                } else if (lateRadio && lateRadio.checked) {
+                    presentCount++; // المتأخرون يحسبون حاضرين
+                } else {
+                    absentCount++;
+                }
+            });
+            
+            document.getElementById('presentCount').textContent = presentCount;
+            document.getElementById('absentCount').textContent = absentCount;
+        }
+
+        function markAllPresent() {
+            allStudentsData.forEach(student => {
+                const presentRadio = document.querySelector(`input[name="attendance_${student.id}"][value="present"]`);
+                if (presentRadio) {
+                    presentRadio.checked = true;
+                }
+            });
+            updateAttendanceStats();
+            showMessage('تم تحديد جميع الطلاب كحاضرين', 'success');
+        }
+
+        function saveAttendance() {
+            const attendanceDate = document.getElementById('attendanceDate').value;
+            const attendanceData = [];
+            
+            allStudentsData.forEach(student => {
+                const presentRadio = document.querySelector(`input[name="attendance_${student.id}"][value="present"]`);
+                const absentRadio = document.querySelector(`input[name="attendance_${student.id}"][value="absent"]`);
+                const lateRadio = document.querySelector(`input[name="attendance_${student.id}"][value="late"]`);
+                const noteInput = document.getElementById(`note_${student.id}`);
+                
+                let status = 'absent';
+                if (presentRadio && presentRadio.checked) status = 'present';
+                else if (lateRadio && lateRadio.checked) status = 'late';
+                
+                attendanceData.push({
+                    studentId: student.id,
+                    studentName: student.name,
+                    date: attendanceDate,
+                    status: status,
+                    note: noteInput ? noteInput.value : ''
+                });
+            });
+            
+            // حفظ البيانات محلياً (يمكن تطويرها لاحقاً للحفظ في قاعدة البيانات)
+            localStorage.setItem(`attendance_${attendanceDate}`, JSON.stringify(attendanceData));
+            showMessage(`تم حفظ بيانات الحضور لتاريخ ${attendanceDate}`, 'success');
+        }
+
+        function changeAttendanceView() {
+            const viewMode = document.getElementById('attendanceViewMode').value;
+            const dailyView = document.getElementById('dailyAttendanceView');
+            const monthlyView = document.getElementById('monthlyAttendanceView');
+            
+            if (viewMode === 'monthly') {
+                dailyView.classList.add('hidden');
+                monthlyView.classList.remove('hidden');
+                loadMonthlyAttendance();
+            } else {
+                dailyView.classList.remove('hidden');
+                monthlyView.classList.add('hidden');
+            }
+        }
+
+        function loadDayAttendance() {
+            const selectedDate = document.getElementById('attendanceDate').value;
+            const storedAttendance = localStorage.getItem(`attendance_${selectedDate}`);
+            
+            // تحديث عنوان التاريخ
+            document.getElementById('currentAttendanceDate').textContent = new Date(selectedDate).toLocaleDateString('ar-SA');
+            
+            if (storedAttendance) {
+                const attendanceData = JSON.parse(storedAttendance);
+                
+                // تطبيق البيانات المحفوظة على النموذج
+                attendanceData.forEach(record => {
+                    const statusRadio = document.querySelector(`input[name="attendance_${record.studentId}"][value="${record.status}"]`);
+                    const noteInput = document.getElementById(`note_${record.studentId}`);
+                    
+                    if (statusRadio) {
+                        statusRadio.checked = true;
+                    }
+                    if (noteInput && record.note) {
+                        noteInput.value = record.note;
+                    }
+                });
+                
+                updateAttendanceStats();
+                showMessage(`تم تحميل بيانات الحضور لتاريخ ${selectedDate}`, 'success');
+            } else {
+                // إعادة تعيين النموذج للحالة الافتراضية (غائب)
+                allStudentsData.forEach(student => {
+                    const absentRadio = document.querySelector(`input[name="attendance_${student.id}"][value="absent"]`);
+                    const noteInput = document.getElementById(`note_${student.id}`);
+                    
+                    if (absentRadio) {
+                        absentRadio.checked = true;
+                    }
+                    if (noteInput) {
+                        noteInput.value = '';
+                    }
+                });
+                
+                updateAttendanceStats();
+                showMessage(`لا توجد بيانات حضور محفوظة لتاريخ ${selectedDate}`, 'error');
+            }
+        }
+
+        function generateMonthlyAttendanceTable() {
+            if (allStudentsData.length === 0) {
+                return `
+                    <tr>
+                        <td colspan="6" class="px-6 py-8 text-center text-gray-500">
+                            لا توجد بيانات طلاب
+                        </td>
+                    </tr>
+                `;
+            }
+            
+            return allStudentsData.map(student => {
+                // حساب بيانات الحضور الشهري للطالب (بيانات تجريبية)
+                const presentDays = Math.floor(Math.random() * 5) + 18; // 18-22 يوم حضور
+                const totalDays = 22; // إجمالي أيام الدراسة في الشهر
+                const absentDays = totalDays - presentDays;
+                const attendancePercentage = ((presentDays / totalDays) * 100).toFixed(1);
+                
+                let rating = '';
+                let ratingColor = '';
+                if (attendancePercentage >= 95) {
+                    rating = 'ممتاز';
+                    ratingColor = 'text-green-600 bg-green-100';
+                } else if (attendancePercentage >= 90) {
+                    rating = 'جيد جداً';
+                    ratingColor = 'text-blue-600 bg-blue-100';
+                } else if (attendancePercentage >= 80) {
+                    rating = 'جيد';
+                    ratingColor = 'text-yellow-600 bg-yellow-100';
+                } else {
+                    rating = 'ضعيف';
+                    ratingColor = 'text-red-600 bg-red-100';
+                }
+                
+                return `
+                    <tr class="hover:bg-gray-50">
+                        <td class="px-4 py-3">
+                            <div class="text-sm font-medium text-gray-900">${student.name}</div>
+                            <div class="text-sm text-gray-500">رقم: ${student.id}</div>
+                        </td>
+                        <td class="px-4 py-3 text-center text-sm text-gray-900">${student.grade}</td>
+                        <td class="px-4 py-3 text-center">
+                            <span class="text-lg font-bold text-green-600">${presentDays}</span>
+                        </td>
+                        <td class="px-4 py-3 text-center">
+                            <span class="text-lg font-bold text-red-600">${absentDays}</span>
+                        </td>
+                        <td class="px-4 py-3 text-center">
+                            <span class="text-lg font-bold text-blue-600">${attendancePercentage}%</span>
+                        </td>
+                        <td class="px-4 py-3 text-center">
+                            <span class="px-3 py-1 text-xs font-medium rounded-full ${ratingColor}">
+                                ${rating}
+                            </span>
+                        </td>
+                    </tr>
+                `;
+            }).join('');
+        }
+
+        function loadMonthlyAttendance() {
+            const month = document.getElementById('attendanceMonth').value;
+            const year = document.getElementById('attendanceYear').value;
+            
+            const monthNames = {
+                '1': 'يناير', '2': 'فبراير', '3': 'مارس', '4': 'أبريل',
+                '5': 'مايو', '6': 'يونيو', '7': 'يوليو', '8': 'أغسطس',
+                '9': 'سبتمبر', '10': 'أكتوبر', '11': 'نوفمبر', '12': 'ديسمبر'
+            };
+            
+            // تحديث عنوان التقرير
+            document.getElementById('monthlyReportTitle').textContent = `${monthNames[month]} ${year}`;
+            
+            // حساب إحصائيات الشهر (بيانات تجريبية)
+            const totalDays = 22; // أيام الدراسة في الشهر
+            const avgPresent = 92.5; // متوسط الحضور
+            const avgAbsent = 7.5; // متوسط الغياب
+            const bestClass = 'الصف السادس الأساسي'; // أفضل صف
+            
+            // تحديث الإحصائيات
+            document.getElementById('monthlyTotalDays').textContent = totalDays;
+            document.getElementById('monthlyAvgPresent').textContent = avgPresent + '%';
+            document.getElementById('monthlyAvgAbsent').textContent = avgAbsent + '%';
+            document.getElementById('monthlyBestClass').textContent = bestClass;
+            
+            // تحديث الجدول
+            document.getElementById('monthlyAttendanceTableBody').innerHTML = generateMonthlyAttendanceTable();
+        }
+
+        function exportMonthlyReport() {
+            const month = document.getElementById('attendanceMonth').value;
+            const year = document.getElementById('attendanceYear').value;
+            
+            const monthNames = {
+                '1': 'يناير', '2': 'فبراير', '3': 'مارس', '4': 'أبريل',
+                '5': 'مايو', '6': 'يونيو', '7': 'يوليو', '8': 'أغسطس',
+                '9': 'سبتمبر', '10': 'أكتوبر', '11': 'نوفمبر', '12': 'ديسمبر'
+            };
+            
+            // إنشاء محتوى التقرير
+            let reportContent = `تقرير الحضور الشهري - ${monthNames[month]} ${year}\n`;
+            reportContent += `مدارس الهمة العلمية الأهلية\n`;
+            reportContent += `تاريخ التقرير: ${new Date().toLocaleDateString('ar-SA')}\n\n`;
+            
+            reportContent += `الطالب\tالصف\tأيام الحضور\tأيام الغياب\tنسبة الحضور\tالتقييم\n`;
+            
+            allStudentsData.forEach(student => {
+                const presentDays = Math.floor(Math.random() * 5) + 18;
+                const totalDays = 22;
+                const absentDays = totalDays - presentDays;
+                const attendancePercentage = ((presentDays / totalDays) * 100).toFixed(1);
+                
+                let rating = '';
+                if (attendancePercentage >= 95) rating = 'ممتاز';
+                else if (attendancePercentage >= 90) rating = 'جيد جداً';
+                else if (attendancePercentage >= 80) rating = 'جيد';
+                else rating = 'ضعيف';
+                
+                reportContent += `${student.name}\t${student.grade}\t${presentDays}\t${absentDays}\t${attendancePercentage}%\t${rating}\n`;
+            });
+            
+            // تحميل التقرير كملف نصي
+            const blob = new Blob([reportContent], { type: 'text/plain;charset=utf-8' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `تقرير_الحضور_${monthNames[month]}_${year}.txt`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+            
+            showMessage('تم تصدير التقرير بنجاح', 'success');
+        }
+
+        function showFeesManagement() {
+            currentAdminSection = 'fees';
+            const contentArea = document.getElementById('adminContentArea');
+            contentArea.innerHTML = `
+                <h3 class="text-2xl font-bold text-gray-800 mb-6">💰 إدارة الرسوم الدراسية</h3>
+                
+                <div class="mb-6">
+                    <label for="feeStudentSelect" class="block text-sm font-medium text-gray-700 mb-2">اختر الطالب</label>
+                    <select id="feeStudentSelect" onchange="loadStudentFees()" class="w-full max-w-md px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                        <option value="">اختر طالب</option>
+                        ${allStudentsData.map(student => `<option value="${student.id}">${student.name} - ${student.grade}</option>`).join('')}
+                    </select>
+                </div>
+                
+                <div id="feesForm" class="hidden">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                        <div>
+                            <label for="totalFees" class="block text-sm font-medium text-gray-700 mb-2">إجمالي الرسوم</label>
+                            <input type="number" id="totalFeesInput" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label for="paidFees" class="block text-sm font-medium text-gray-700 mb-2">المبلغ المدفوع</label>
+                            <input type="number" id="paidFeesInput" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label for="remainingFees" class="block text-sm font-medium text-gray-700 mb-2">المبلغ المتبقي</label>
+                            <input type="number" id="remainingFeesInput" readonly class="w-full px-4 py-3 border border-gray-300 rounded-lg bg-gray-50">
+                        </div>
+                    </div>
+                    
+                    <button onclick="saveFees()" class="bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-bold transition-colors">
+                        حفظ الرسوم
+                    </button>
+                </div>
+            `;
+        }
+
+        function loadStudentFees() {
+            const studentId = document.getElementById('feeStudentSelect').value;
+            if (!studentId) {
+                document.getElementById('feesForm').classList.add('hidden');
+                return;
+            }
+            
+            const student = allStudentsData.find(s => s.id === studentId);
+            if (!student) return;
+            
+            document.getElementById('totalFeesInput').value = student.fees?.total || 0;
+            document.getElementById('paidFeesInput').value = student.fees?.paid || 0;
+            document.getElementById('remainingFeesInput').value = (student.fees?.total || 0) - (student.fees?.paid || 0);
+            
+            // إضافة مستمع للتغيير في المبالغ
+            document.getElementById('totalFeesInput').addEventListener('input', calculateRemaining);
+            document.getElementById('paidFeesInput').addEventListener('input', calculateRemaining);
+            
+            document.getElementById('feesForm').classList.remove('hidden');
+        }
+
+        function calculateRemaining() {
+            const total = parseInt(document.getElementById('totalFeesInput').value) || 0;
+            const paid = parseInt(document.getElementById('paidFeesInput').value) || 0;
+            document.getElementById('remainingFeesInput').value = total - paid;
+        }
+
+        async function saveFees() {
+            const studentId = document.getElementById('feeStudentSelect').value;
+            if (!studentId) return;
+            
+            const student = allStudentsData.find(s => s.id === studentId);
+            if (!student) return;
+            
+            const total = parseInt(document.getElementById('totalFeesInput').value) || 0;
+            const paid = parseInt(document.getElementById('paidFeesInput').value) || 0;
+            
+            const updatedStudent = {
+                ...student,
+                fees: {
+                    total: total,
+                    paid: paid,
+                    remaining: total - paid
+                }
+            };
+            
+            const success = await saveStudentData(updatedStudent, 'update');
+            if (success) {
+                showMessage('تم حفظ بيانات الرسوم بنجاح', 'success');
+            }
+        }
+
+        function showActivitiesManagement() {
+            currentAdminSection = 'activities';
+            const contentArea = document.getElementById('adminContentArea');
+            contentArea.innerHTML = `
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-2xl font-bold text-gray-800">🎉 إدارة الأنشطة المدرسية</h3>
+                    <button onclick="showAddActivityForm()" class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg transition-colors">
+                        ➕ إضافة نشاط جديد
+                    </button>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="activitiesGrid">
+                    ${generateActivitiesGrid()}
+                </div>
+            `;
+        }
+
+        function generateActivitiesGrid() {
+            const activities = getStoredActivities();
+            
+            if (activities.length === 0) {
+                return `
+                    <div class="col-span-full text-center py-12">
+                        <div class="text-6xl mb-4">🎨</div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-2">لا توجد أنشطة حالياً</h4>
+                        <p class="text-gray-600">اضغط على "إضافة نشاط جديد" لبدء إضافة الأنشطة</p>
+                    </div>
+                `;
+            }
+            
+            return activities.map(activity => `
+                <div class="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm">
+                    <div class="h-48 bg-gradient-to-br ${activity.color} flex items-center justify-center">
+                        <div class="text-white text-6xl">${activity.icon}</div>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-bold text-gray-800 mb-2">${activity.title}</h4>
+                        <p class="text-gray-600 text-sm mb-3">${activity.description}</p>
+                        <div class="flex justify-between items-center">
+                            <div class="text-xs text-gray-500">${activity.date}</div>
+                            <div class="flex space-x-2">
+                                <button onclick="editActivity('${activity.id}')" class="bg-blue-500 hover:bg-blue-600 text-white px-2 py-1 rounded text-xs transition-colors">
+                                    تعديل
+                                </button>
+                                <button onclick="deleteActivity('${activity.id}')" class="bg-red-500 hover:bg-red-600 text-white px-2 py-1 rounded text-xs transition-colors">
+                                    حذف
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function showAddActivityForm() {
+            const contentArea = document.getElementById('adminContentArea');
+            contentArea.innerHTML = `
+                <div class="max-w-2xl mx-auto">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">➕ إضافة نشاط جديد</h3>
+                    
+                    <form onsubmit="addNewActivity(event)" class="space-y-6">
+                        <div>
+                            <label for="activityTitle" class="block text-sm font-medium text-gray-700 mb-2">عنوان النشاط</label>
+                            <input type="text" id="activityTitle" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label for="activityDescription" class="block text-sm font-medium text-gray-700 mb-2">وصف النشاط</label>
+                            <textarea id="activityDescription" rows="3" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"></textarea>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="activityDate" class="block text-sm font-medium text-gray-700 mb-2">تاريخ النشاط</label>
+                                <input type="date" id="activityDate" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent">
+                            </div>
+                            
+                            <div>
+                                <label for="activityIcon" class="block text-sm font-medium text-gray-700 mb-2">رمز النشاط</label>
+                                <select id="activityIcon" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent">
+                                    <option value="">اختر رمز</option>
+                                    <option value="🏆">🏆 مسابقة</option>
+                                    <option value="⚽">⚽ رياضة</option>
+                                    <option value="🎨">🎨 فنون</option>
+                                    <option value="📚">📚 ثقافي</option>
+                                    <option value="🎭">🎭 مسرح</option>
+                                    <option value="🔬">🔬 علمي</option>
+                                    <option value="🎵">🎵 موسيقى</option>
+                                    <option value="🌱">🌱 بيئي</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label for="activityColor" class="block text-sm font-medium text-gray-700 mb-2">لون الخلفية</label>
+                            <select id="activityColor" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent">
+                                <option value="">اختر لون</option>
+                                <option value="from-blue-400 to-blue-600">أزرق</option>
+                                <option value="from-green-400 to-green-600">أخضر</option>
+                                <option value="from-purple-400 to-purple-600">بنفسجي</option>
+                                <option value="from-orange-400 to-orange-600">برتقالي</option>
+                                <option value="from-red-400 to-red-600">أحمر</option>
+                                <option value="from-yellow-400 to-yellow-600">أصفر</option>
+                                <option value="from-pink-400 to-pink-600">وردي</option>
+                                <option value="from-teal-400 to-teal-600">تركوازي</option>
+                            </select>
+                        </div>
+                        
+                        <div class="flex space-x-4">
+                            <button type="submit" class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-bold transition-colors">
+                                حفظ النشاط
+                            </button>
+                            <button type="button" onclick="showActivitiesManagement()" class="bg-gray-500 hover:bg-gray-600 text-white px-6 py-3 rounded-lg font-bold transition-colors">
+                                إلغاء
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            `;
+        }
+
+        function addNewActivity(event) {
+            event.preventDefault();
+            
+            const activity = {
+                id: Date.now().toString(),
+                title: document.getElementById('activityTitle').value,
+                description: document.getElementById('activityDescription').value,
+                date: new Date(document.getElementById('activityDate').value).toLocaleDateString('ar-SA'),
+                icon: document.getElementById('activityIcon').value,
+                color: document.getElementById('activityColor').value
+            };
+            
+            const activities = getStoredActivities();
+            activities.push(activity);
+            localStorage.setItem('schoolActivities', JSON.stringify(activities));
+            
+            showMessage('تم إضافة النشاط بنجاح', 'success');
+            showActivitiesManagement();
+        }
+
+        function getStoredActivities() {
+            const stored = localStorage.getItem('schoolActivities');
+            if (stored) {
+                return JSON.parse(stored);
+            }
+            
+            // أنشطة افتراضية
+            return [
+                {
+                    id: '1',
+                    title: 'مسابقة القرآن الكريم',
+                    description: 'مسابقة سنوية لحفظ وتلاوة القرآن الكريم',
+                    date: '15/11/2024',
+                    icon: '🏆',
+                    color: 'from-blue-400 to-blue-600'
+                },
+                {
+                    id: '2',
+                    title: 'بطولة كرة القدم',
+                    description: 'بطولة رياضية بين صفوف المدرسة',
+                    date: '22/11/2024',
+                    icon: '⚽',
+                    color: 'from-green-400 to-green-600'
+                },
+                {
+                    id: '3',
+                    title: 'معرض الفنون',
+                    description: 'عرض أعمال الطلاب الفنية والإبداعية',
+                    date: '5/12/2024',
+                    icon: '🎨',
+                    color: 'from-purple-400 to-purple-600'
+                }
+            ];
+        }
+
+        function deleteActivity(activityId) {
+            const confirmDiv = document.createElement('div');
+            confirmDiv.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50';
+            confirmDiv.innerHTML = `
+                <div class="bg-white rounded-lg p-6 max-w-md mx-4">
+                    <h3 class="text-lg font-bold text-gray-800 mb-4">تأكيد الحذف</h3>
+                    <p class="text-gray-600 mb-6">هل أنت متأكد من حذف هذا النشاط؟</p>
+                    <div class="flex space-x-4">
+                        <button onclick="confirmDeleteActivity('${activityId}')" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg transition-colors">
+                            نعم، احذف
+                        </button>
+                        <button onclick="cancelDeleteActivity()" class="bg-gray-500 hover:bg-gray-600 text-white px-4 py-2 rounded-lg transition-colors">
+                            إلغاء
+                        </button>
+                    </div>
+                </div>
+            `;
+            confirmDiv.id = 'confirmActivityDialog';
+            document.body.appendChild(confirmDiv);
+        }
+
+        function confirmDeleteActivity(activityId) {
+            const activities = getStoredActivities();
+            const updatedActivities = activities.filter(activity => activity.id !== activityId);
+            localStorage.setItem('schoolActivities', JSON.stringify(updatedActivities));
+            
+            document.getElementById('confirmActivityDialog').remove();
+            showMessage('تم حذف النشاط بنجاح', 'success');
+            showActivitiesManagement();
+        }
+
+        function cancelDeleteActivity() {
+            document.getElementById('confirmActivityDialog').remove();
+        }
+
+        function showNotificationsManagement() {
+            currentAdminSection = 'notifications';
+            const contentArea = document.getElementById('adminContentArea');
+            contentArea.innerHTML = `
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-2xl font-bold text-gray-800">🔔 إدارة الإشعارات</h3>
+                    <button onclick="showAddNotificationForm()" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg transition-colors">
+                        ➕ إضافة إشعار جديد
+                    </button>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    <div class="lg:col-span-2">
+                        <div class="bg-white rounded-lg shadow-sm border border-gray-200">
+                            <div class="p-4 border-b border-gray-200">
+                                <h4 class="text-lg font-bold text-gray-800">الإشعارات المرسلة</h4>
+                            </div>
+                            <div class="divide-y divide-gray-200" id="notificationsList">
+                                ${generateNotificationsList()}
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <div class="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                            <h4 class="text-lg font-bold text-blue-800 mb-4">إحصائيات الإشعارات</h4>
+                            <div class="space-y-3">
+                                <div class="flex justify-between">
+                                    <span>إجمالي الإشعارات:</span>
+                                    <span class="font-bold text-blue-600" id="totalNotifications">0</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>إشعارات اليوم:</span>
+                                    <span class="font-bold text-green-600" id="todayNotifications">0</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>إشعارات عامة:</span>
+                                    <span class="font-bold text-orange-600" id="generalNotifications">0</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+                            <h5 class="font-bold text-yellow-800 mb-2">💡 نصائح</h5>
+                            <ul class="text-sm text-yellow-700 space-y-1">
+                                <li>• استخدم الإشعارات العامة للأخبار المهمة</li>
+                                <li>• اكتب عناوين واضحة ومختصرة</li>
+                                <li>• تجنب الإفراط في الإشعارات</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            updateNotificationStats();
+        }
+
+        function generateNotificationsList() {
+            const notifications = getStoredNotifications();
+            
+            if (notifications.length === 0) {
+                return `
+                    <div class="p-8 text-center text-gray-500">
+                        <div class="text-4xl mb-2">📭</div>
+                        <p>لا توجد إشعارات مرسلة</p>
+                    </div>
+                `;
+            }
+            
+            return notifications.map(notification => `
+                <div class="p-4 hover:bg-gray-50">
+                    <div class="flex items-start justify-between">
+                        <div class="flex-1">
+                            <div class="flex items-center space-x-2 mb-2">
+                                <span class="text-lg">${getNotificationIcon(notification.type)}</span>
+                                <h5 class="font-bold text-gray-800">${notification.title}</h5>
+                                <span class="px-2 py-1 text-xs rounded-full ${getNotificationTypeColor(notification.type)}">
+                                    ${getNotificationTypeText(notification.type)}
+                                </span>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-2">${notification.message}</p>
+                            <div class="text-xs text-gray-500">
+                                ${notification.date} • ${notification.target === 'all' ? 'جميع الطلاب' : 'طلاب محددين'}
+                            </div>
+                        </div>
+                        <div class="flex space-x-2">
+                            <button onclick="deleteNotification('${notification.id}')" class="text-red-500 hover:text-red-700 text-sm">
+                                حذف
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function showAddNotificationForm() {
+            const contentArea = document.getElementById('adminContentArea');
+            contentArea.innerHTML = `
+                <div class="max-w-2xl mx-auto">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">➕ إضافة إشعار جديد</h3>
+                    
+                    <form onsubmit="addNewNotification(event)" class="space-y-6">
+                        <div>
+                            <label for="notificationTitle" class="block text-sm font-medium text-gray-700 mb-2">عنوان الإشعار</label>
+                            <input type="text" id="notificationTitle" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label for="notificationMessage" class="block text-sm font-medium text-gray-700 mb-2">نص الإشعار</label>
+                            <textarea id="notificationMessage" rows="4" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"></textarea>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="notificationType" class="block text-sm font-medium text-gray-700 mb-2">نوع الإشعار</label>
+                                <select id="notificationType" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent">
+                                    <option value="">اختر النوع</option>
+                                    <option value="info">معلومات عامة</option>
+                                    <option value="warning">تنبيه</option>
+                                    <option value="success">إنجاز</option>
+                                    <option value="urgent">عاجل</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label for="notificationTarget" class="block text-sm font-medium text-gray-700 mb-2">المستهدفون</label>
+                                <select id="notificationTarget" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent">
+                                    <option value="">اختر المستهدفين</option>
+                                    <option value="all">جميع الطلاب</option>
+                                    <option value="grade">صف محدد</option>
+                                    <option value="specific">طلاب محددين</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div id="gradeSelection" class="hidden">
+                            <label for="targetGrade" class="block text-sm font-medium text-gray-700 mb-2">اختر الصف</label>
+                            <select id="targetGrade" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent">
+                                <option value="">اختر الصف</option>
+                                <option value="الصف الأول الأساسي">الصف الأول الأساسي</option>
+                                <option value="الصف الثاني الأساسي">الصف الثاني الأساسي</option>
+                                <option value="الصف الثالث الأساسي">الصف الثالث الأساسي</option>
+                                <option value="الصف الرابع الأساسي">الصف الرابع الأساسي</option>
+                                <option value="الصف الخامس الأساسي">الصف الخامس الأساسي</option>
+                                <option value="الصف السادس الأساسي">الصف السادس الأساسي</option>
+                                <option value="الصف السابع الأساسي">الصف السابع الأساسي</option>
+                                <option value="الصف الثامن الأساسي">الصف الثامن الأساسي</option>
+                                <option value="الصف التاسع الأساسي">الصف التاسع الأساسي</option>
+                            </select>
+                        </div>
+                        
+                        <div class="flex space-x-4">
+                            <button type="submit" class="bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-lg font-bold transition-colors">
+                                إرسال الإشعار
+                            </button>
+                            <button type="button" onclick="showNotificationsManagement()" class="bg-gray-500 hover:bg-gray-600 text-white px-6 py-3 rounded-lg font-bold transition-colors">
+                                إلغاء
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            `;
+            
+            // إضافة مستمع الأحداث فوراً
+            const targetSelect = document.getElementById('notificationTarget');
+            if (targetSelect) {
+                targetSelect.addEventListener('change', function() {
+                    const gradeSelection = document.getElementById('gradeSelection');
+                    if (gradeSelection) {
+                        if (this.value === 'grade') {
+                            gradeSelection.classList.remove('hidden');
+                        } else {
+                            gradeSelection.classList.add('hidden');
+                        }
+                    }
+                });
+            }
+        }
+
+        function addNewNotification(event) {
+            event.preventDefault();
+            
+            const notification = {
+                id: Date.now().toString(),
+                title: document.getElementById('notificationTitle').value,
+                message: document.getElementById('notificationMessage').value,
+                type: document.getElementById('notificationType').value,
+                target: document.getElementById('notificationTarget').value,
+                targetGrade: document.getElementById('targetGrade')?.value || '',
+                date: new Date().toLocaleDateString('ar-SA'),
+                timestamp: new Date().toISOString()
+            };
+            
+            const notifications = getStoredNotifications();
+            notifications.unshift(notification); // إضافة في المقدمة
+            localStorage.setItem('schoolNotifications', JSON.stringify(notifications));
+            
+            showMessage('تم إرسال الإشعار بنجاح', 'success');
+            showNotificationsManagement();
+        }
+
+        function getStoredNotifications() {
+            const stored = localStorage.getItem('schoolNotifications');
+            if (stored) {
+                return JSON.parse(stored);
+            }
+            
+            // إشعارات افتراضية
+            return [
+                {
+                    id: '1',
+                    title: 'تنويه دراسي',
+                    message: 'امتحانات الفصل الأول ستبدأ يوم الأحد الموافق 22 ديسمبر 2024',
+                    type: 'info',
+                    target: 'all',
+                    date: new Date().toLocaleDateString('ar-SA'),
+                    timestamp: new Date().toISOString()
+                },
+                {
+                    id: '2',
+                    title: 'تهنئة',
+                    message: 'مبروك لجميع الطلاب المشاركين في مسابقة القرآن الكريم',
+                    type: 'success',
+                    target: 'all',
+                    date: new Date(Date.now() - 86400000).toLocaleDateString('ar-SA'),
+                    timestamp: new Date(Date.now() - 86400000).toISOString()
+                }
+            ];
+        }
+
+        function getNotificationIcon(type) {
+            const icons = {
+                info: 'ℹ️',
+                warning: '⚠️',
+                success: '🎉',
+                urgent: '🚨'
+            };
+            return icons[type] || 'ℹ️';
+        }
+
+        function getNotificationTypeColor(type) {
+            const colors = {
+                info: 'bg-blue-100 text-blue-800',
+                warning: 'bg-yellow-100 text-yellow-800',
+                success: 'bg-green-100 text-green-800',
+                urgent: 'bg-red-100 text-red-800'
+            };
+            return colors[type] || 'bg-gray-100 text-gray-800';
+        }
+
+        function getNotificationTypeText(type) {
+            const texts = {
+                info: 'معلومات',
+                warning: 'تنبيه',
+                success: 'إنجاز',
+                urgent: 'عاجل'
+            };
+            return texts[type] || 'عام';
+        }
+
+        function updateNotificationStats() {
+            const notifications = getStoredNotifications();
+            const today = new Date().toLocaleDateString('ar-SA');
+            
+            document.getElementById('totalNotifications').textContent = notifications.length;
+            document.getElementById('todayNotifications').textContent = notifications.filter(n => n.date === today).length;
+            document.getElementById('generalNotifications').textContent = notifications.filter(n => n.target === 'all').length;
+        }
+
+        function deleteNotification(notificationId) {
+            const notifications = getStoredNotifications();
+            const updatedNotifications = notifications.filter(notification => notification.id !== notificationId);
+            localStorage.setItem('schoolNotifications', JSON.stringify(updatedNotifications));
+            
+            showMessage('تم حذف الإشعار بنجاح', 'success');
+            showNotificationsManagement();
+        }
+
+        // تحميل فوري للبيانات
+        loadSampleData();
+        showHomePage();
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'993ca8cb4492f7ba',t:'MTc2MTM0MjMwNy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
